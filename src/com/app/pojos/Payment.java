@@ -33,6 +33,7 @@ public class Payment {
 		this.pid = pid;
 	}
 	@ManyToOne
+	@JoinColumn(name = "uid")
 	public User getUid() {
 		return uid;
 	}

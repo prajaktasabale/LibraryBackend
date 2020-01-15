@@ -76,6 +76,7 @@ public class User {
 	public void setRole(Role role) {
 		this.role = role;
 	}
+	
 	@OneToMany(mappedBy = "uid",cascade = CascadeType.ALL,orphanRemoval = true)
 	public List<Payment> getPayments() {
 		return payments;
@@ -84,7 +85,7 @@ public class User {
 	public void setPayments(List<Payment> payments) {
 		this.payments = payments;
 	}
-
+	
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", email=" + email + ", phone=" + phone + ", password=" + password
